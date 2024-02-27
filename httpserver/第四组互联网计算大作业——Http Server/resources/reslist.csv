@@ -1,0 +1,17 @@
+"/index.html","application/html",2,"",""
+"/404.html","application/html",2,"",""
+"/405.html","application/html",2,"",""
+"/500.html","application/html",2,"",""
+"/onloginsuccessful.html","application/html",2,"",""
+"/onloginfail.html","application/html",2,"",""
+"/onregisterfailed.html","application/html",2,"",""
+"/onregistersuccessful.html","application/html",2,"",""
+"/redirectdest.html","application/html",2,"",""
+"/login","application/html",3,"/onloginsuccessful.html","/onloginfail.html"
+"/register","application/html",1,"/onregistersuccessful.html","/onregisterfailed.html"
+"/redirectsource.html","application/html",2,"/redirectdest.html",""
+"/testrandomredirect.html","application/html",2,"","/redirectdest.html"
+"/img.png","image/png",2,"",""
+"/login.html","",2,"",""
+
+

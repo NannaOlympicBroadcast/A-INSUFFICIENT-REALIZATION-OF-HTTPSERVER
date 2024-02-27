@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<body>
+<h1>LOGIN</h1>
+<p1>uname</p1><input id="one"><br>
+<p2>password</p2><input id="two"><br>
+<button onclick="submit">提交</button>
+<script>
+  function  submit()
+    {
+        obj={"uname":document.getElementById("one").value,"password":document.getElementById("two").value}
+    var httpRequest = new XMLHttpRequest();//第一步：创建需要的对象
+httpRequest.open('POST', 'localhost:8080/login', true); //第二步：打开连接/***发送json格式文件必须设置请求头 ；如下 - */
+httpRequest.setRequestHeader("Content-type","application/json");//设置请求头 注：post方式必须设置请求头（在建立连接后设置请求头）
+httpRequest.send(JSON.stringify(obj));//发送请求 将json写入send中
+/**
+ * 获取数据后的处理程序
+ */
+httpRequest.onreadystatechange = function () {//请求后的回调接口，可将请求成功后要执行的程序写在其中
+    if (httpRequest.readyState == 4 && httpRequest.status == 200) {//验证请求是否发送成功
+        var json = httpRequest.responseText;//获取到服务端返回的数据
+        document.write(json)
+    }
+}}
+</script>
+</body>
+</html>
